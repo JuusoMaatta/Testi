@@ -1,13 +1,13 @@
-#include <iostream>
-#include <string>
-#include <WS2tcpip.h>
-#pragma comment(lib, "ws2_32.lib")
+#include "TCPclient.h"
 
 using namespace std;
 
-void main()
+TCPclient::TCPclient() {
+}
+
+void TCPclient::ConnectESP(const string ipESP)
 {
-	string ipAddress = "82.130.17.78";			// IP Address of the server 
+	string ipAddress = ipESP;				// IP Address of the server "82.130.17.78"
 	int port = 54000;						// Listening port # on the server
 
 	// Initialize WinSock
